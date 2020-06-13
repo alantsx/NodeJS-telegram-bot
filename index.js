@@ -11,6 +11,6 @@ const bot = new TelegramBot( TOKEN, { polling: true });
 bot.on("polling_error", console.log);
 
 bot.on('message', (msg) => {
-    bot.sendMessage(msg.chat.id, 'Received your message');
+    bot.sendMessage(msg.chat.id, 'Received your message.');
 })
 
