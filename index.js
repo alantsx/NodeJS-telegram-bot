@@ -31,6 +31,7 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
 
 //Function Return Random Number
 bot.onText(/\/viadagem (.+)/, (msg) => {
+    const chatId = msg.chat.id;
     const resp = 'Seu nível de viadagem é de 100% hoje';
     
     bot.sendMessage(chatId, resp);
