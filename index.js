@@ -20,10 +20,6 @@ app.get('/', function(request, response) {
 //Send console log on polling_error
 bot.on("polling_error", console.log);
 
-// //Bot send message back on reply
-// bot.on('message', (msg) => {
-//     bot.sendMessage(msg.chat.id, 'Received your message.');
-// });
 
 //Matches "/echo [message]"
 bot.onText(/\/echo (.+)/, (msg, match) => {
