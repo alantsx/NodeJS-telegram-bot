@@ -31,8 +31,8 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
 
 //Function Return Random Number
 bot.onText(/\/viadagem/, (msg) => {
-    const reply = { reply_to_message_id: msg.message_id }
+    const reply = { reply_to_message_id: msg.message_id };
     const chatId = message.chat.id;
     
-    bot.sendMessage(reply, chatId, `Deixa eu ver aqui na minha bola de cristal, ${message.from.first_name}. Seu nível de viadagem hoje é de 100%`);
+    bot.sendMessage(chatId, `Deixa eu ver aqui na minha bola de cristal, ${message.from.first_name}. Seu nível de viadagem hoje é de 100%`), reply;
 })
