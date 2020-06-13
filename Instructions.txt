@@ -1,2 +1,4 @@
 - Set Start comando in package.json
 - npm install socket.io
+
+(tentar desinstalar socket.io)
