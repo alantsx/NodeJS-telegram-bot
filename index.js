@@ -34,5 +34,5 @@ bot.onText(/\/viadagem/, (message) => {
     msg = message.chat.id;
     // reply = message.reply_to_message;
     
-    bot.sendMessage(msg, reply_to_message, `Deixa eu ver aqui na minha bola de cristal, ${message.from.first_name}. Seu nível de viadagem hoje é de 100%`);
+    bot.sendMessage(msg, `Deixa eu ver aqui na minha bola de cristal, ${message.from.first_name}. Seu nível de viadagem hoje é de 100%`);
 })
