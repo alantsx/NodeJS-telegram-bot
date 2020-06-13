@@ -34,5 +34,5 @@ bot.onText(/\/viadagem/, (message) => {
     const chatId = message.chat.id;
     const resp = 'Seu nível de viadagem é de 100% hoje';
     
-    bot.sendMessage(chatId, resp);
+    bot.onReplyToMessage(chatId, resp);
 })
