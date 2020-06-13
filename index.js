@@ -1,6 +1,11 @@
 process.env.NTBA_FIX_319 = 1;
 var express = require('express');
 var app     = express();
+const TelegramBot = require('node-telegram-bot-api');
+
+const TOKEN = '795725413:AAGy80ZQKV9Z2s5rs7noy6dJAH4Or68X39o';
+
+const bot = new TelegramBot( TOKEN, { polling: true });
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -12,15 +17,19 @@ app.get('/', function(request, response) {
     console.log('App is running, server is listening on port ', app.get('port'));
 });
 
-const TelegramBot = require('node-telegram-bot-api');
-
-const TOKEN = '795725413:AAGy80ZQKV9Z2s5rs7noy6dJAH4Or68X39o';
-
-const bot = new TelegramBot( TOKEN, { polling: true });
-
+//Send console log on polling_error
 bot.on("polling_error", console.log);
 
+//Bot send message back on reply
 bot.on('message', (msg) => {
     bot.sendMessage(msg.chat.id, 'Received your message.');
-})
+});
+
+//Matches "/echo [message]"
+bot.onText(/\/echo (.+)/, (msg, match) => {
+    const chatId = msg.chat.id;
+    const resp = match[1];
+
+    bot.sendMessage(chatId, resp);
+});
 
