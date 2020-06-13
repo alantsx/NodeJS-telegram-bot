@@ -1,9 +1,6 @@
 process.env.NTBA_FIX_319 = 1;
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
-});
+process.env.PORT = 3000;
 
 const TelegramBot = require('node-telegram-bot-api');
 
