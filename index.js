@@ -35,5 +35,5 @@ bot.onText(/\/viadagem/, (message) => {
     reply = message.reply_to_message;
     const resp = 'Seu nível de viadagem é de 100% hoje';
     
-    bot.sendMessage(msg, reply, resp);
+    bot.sendMessage(msg, msg.from.first_name + resp);
 })
