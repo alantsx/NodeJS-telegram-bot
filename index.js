@@ -33,5 +33,5 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
 bot.onText(/\/viadagem/, (message) => {
     msg = message.chat.id;
     
-    bot.sendMessage(msg, `Deixa eu ver aqui na minha bola de cristal,  ${message.from.first_name}. Seu nível de viadagem hoje é de 100%`);
+    bot.sendMessage(msg, `Deixa eu ver aqui na minha bola de cristal, ${message.from.first_name}. Seu nível de viadagem hoje é de 100%`);
 })
