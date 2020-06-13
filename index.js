@@ -3,7 +3,7 @@ var express = require('express');
 var app     = express();
 const TelegramBot = require('node-telegram-bot-api');
 
-const TOKEN = '795725413:AAGy80ZQKV9Z2s5rs7noy6dJAH4Or68X39o';
+// const TOKEN = '795725413:AAGy80ZQKV9Z2s5rs7noy6dJAH4Or68X39o';
 
 const bot = new TelegramBot( TOKEN, { polling: true });
 
@@ -22,7 +22,7 @@ bot.on("polling_error", console.log);
 
 
 //Matches "/echo [message]"
-bot.onText(/\/echo (.+)/, (msg, match) => {
+bot.onText(/\/repita (.+)/, (msg, match) => {
     const chatId = msg.chat.id;
     const resp = match[1];
 
