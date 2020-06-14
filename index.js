@@ -3,7 +3,7 @@ var express = require('express');
 var app     = express();
 const TelegramBot = require('node-telegram-bot-api');
 
-const TOKEN = '795725413:AAGy80ZQKV9Z2s5rs7noy6dJAH4Or68X39o';
+const TOKEN = 'your-bot-token';
 
 const bot = new TelegramBot( TOKEN, { polling: true });
 
@@ -30,9 +30,9 @@ bot.onText(/\/repita (.+)/, (msg, match) => {
 });
 
 //Function Return Random Number
-bot.onText(/\/viadagem/, (msg) => {
+bot.onText(/\/sorte/, (msg) => {
     const percent = Math.floor(Math.random() * 101);
-    const resp = `Deixa eu ver aqui na minha bola de cristal, ${msg.from.first_name}. Seu nível de viadagem hoje é de ${percent}% 🏳️‍🌈🏳️‍🌈!`;
+    const resp = `Deixa eu ver aqui na minha bola de cristal, ${msg.from.first_name}. Seu nível de sorte hoje é de ${percent}% !`;
     const opts = { reply_to_message_id: msg.message_id };
     
     bot.sendMessage(msg.chat.id, resp, opts);
