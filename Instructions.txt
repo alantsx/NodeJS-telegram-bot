@@ -1,7 +1,0 @@
-- Configurar TOKEN e BotFather
-
-- Set Start comando in package.json
-
-- Configurar Express e portas
-
-- process.env.NTBA_FIX_319 = 1;
