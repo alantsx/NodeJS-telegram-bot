@@ -21,7 +21,7 @@ app.get('/', function(request, response) {
 bot.on("polling_error", console.log);
 
 
-//Matches "/echo [message]"
+//Matches "/repita [message]"
 bot.onText(/\/repita (.+)/, (msg, match) => {
     const chatId = msg.chat.id;
     const resp = match[1];
