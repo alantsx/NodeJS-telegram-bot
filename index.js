@@ -30,8 +30,9 @@ bot.onText(/\/repita (.+)/, (msg, match) => {
 });
 
 //Function Return Random Number
-bot.onText(/\/viadagem/, (msg) => {
-    const resp = `Deixa eu ver aqui na minha bola de cristal, ${msg.from.first_name}. Seu nível de viadagem hoje é de 100%`;
+bot.onText(/\/sorte/, (msg) => {
+    const percent = Math.floor(Math.random() * 101);
+    const resp = `Deixa eu ver aqui na minha bola de cristal, ${msg.from.first_name}. Seu nível de sorte hoje é de ${percent}%!`;
     const opts = { reply_to_message_id: msg.message_id };
     
     bot.sendMessage(msg.chat.id, resp, opts);
